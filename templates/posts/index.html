@@ -1,0 +1,24 @@
+{% extends 'posts/layout.html' %}
+
+{% block content %}
+{#<h3 class="center-align green lighten-3">{{title}}</h3>#}
+{#<ul class="collection">#}
+{#  {% for post in posts %}#}
+{#    <li class="collection-item"><a href="/posts/details/{{post.id}}">{{post.title}}</a></li>#}
+{#  {% endfor %}#}
+{#</ul>#}
+    <div style="background-image: url('https://forum.xat.com/uploads/monthly_2017_02/stars-wallpaper-night-sky-stars-background-psdgraphics-camrevs.jpg.694a50a9e9b33205cba034b75067be06.jpg')">
+
+        <div class="row">
+            {% for post in posts %}
+                <div class="col s12 m6">
+                    <div class="card-panel  light-green darken-2">
+        <span class="white-text"><a style="color: antiquewhite" href="/posts/details/{{post.id}}">{{post.title}}</a>
+        </span>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}
